@@ -2,12 +2,11 @@ com.spencer.utils/
  ├── geometry/
  │    ├── Point.java           // already exists
  │    ├── Line.java            // optional: represents a line segment between points
- │    ├── Polygon.java         // optional: convex/concave polygon operations
  │    ├── Vector2D.java        // optional: vector math operations
  ├── grid/
  │    ├── Array2d.java         // already exists
- │    ├── GridUtils.java       // static helper methods for grids
- │    ├── GridIterator.java    // iterate over points or values
+ │    ├── GridUtils.java       // static helper methods for grids Implementing Later
+ │    ├── GridIterator.java    // iterate over points or values 
  │    ├── GridFilter.java      // functional filtering of grid elements
  │    ├── GridMapper.java      // functional mapping of elements
  │    ├── GridStats.java       // min/max/sum/average/stddev

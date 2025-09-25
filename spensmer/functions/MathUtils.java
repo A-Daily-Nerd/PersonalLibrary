@@ -2,6 +2,7 @@ package spensmer.functions;
 
 import spensmer.utils.geometry.Line;
 import spensmer.utils.geometry.Point;
+import spensmer.utils.grid.Array2d;
 
 @SuppressWarnings("unused")
 public class MathUtils 
@@ -23,5 +24,16 @@ public class MathUtils
     public static Double getAngleFromPoint(Point<Double> pointValue) {
         Double finalValue = Math.atan(pointValue.y/pointValue.x);
         return finalValue;
+    }
+
+    public static <T extends Number> Array2d<Double> matrixAddition(Array2d<T> a, Array2d<T> b) {
+        if ((a.width != b.width) || (a.height != b.height)) {
+            throw new ArithmeticException("Matricies have to be the same size");
+        }
+        a.forEach((point, value) -> {
+            // add value from b at the same point
+            Double sum = value.doubleValue() + b.getValue(point).doubleValue();
+            a.setValue(point, sum); // store the new value back into a
+        });
     }
 }

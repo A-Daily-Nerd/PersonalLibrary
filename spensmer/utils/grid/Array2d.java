@@ -2,12 +2,13 @@ package spensmer.utils.grid;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.function.BiConsumer;
 
 import spensmer.utils.geometry.Point;
 
 public class Array2d<arrayType> {
-    private int width;
-    private int height;
+    public int width;
+    public int height;
     private arrayType[] data;
     /**
      * @param componentType Type to store in the array
@@ -52,4 +53,15 @@ public class Array2d<arrayType> {
             System.out.println();
         }
     }
+
+    public void forEach(BiConsumer<Point<Integer>, arrayType> action) {
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            Point<Integer> point = new Point<>(convertIntToT(x), convertIntToT(y));
+            arrayType value = getValue(point);
+            action.accept(point, value);
+            }
+        }
+    }
+
 }
