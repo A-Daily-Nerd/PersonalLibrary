@@ -1,0 +1,24 @@
+com.spencer.utils/
+ ├── geometry/
+ │    ├── Point.java           // already exists
+ │    ├── Line.java            // optional: represents a line segment between points
+ │    ├── Polygon.java         // optional: convex/concave polygon operations
+ │    ├── Vector2D.java        // optional: vector math operations
+ ├── grid/
+ │    ├── Array2d.java         // already exists
+ │    ├── GridUtils.java       // static helper methods for grids
+ │    ├── GridIterator.java    // iterate over points or values
+ │    ├── GridFilter.java      // functional filtering of grid elements
+ │    ├── GridMapper.java      // functional mapping of elements
+ │    ├── GridStats.java       // min/max/sum/average/stddev
+ │    ├── NeighborsFinder.java // get neighbors of a point
+ │    ├── Pathfinding.java     // BFS, A*, or Dijkstra on grids
+ │    ├── ShapeDrawer.java     // draw lines, rectangles, circles on Array2d
+ │    ├── FloodFill.java       // flood fill algorithm
+ ├── math/
+ │    ├── MatrixOps.java       // addition, multiplication, transpose
+ │    ├── MathUtils.java       // generic numeric helpers
+ │    ├── Convolution.java     // apply kernel/filter to numeric grids
+ └── io/
+      ├── GridPrinter.java     // pretty print Array2d in console
+      ├── GridSerializer.java  // save/load Array2d to/from file
