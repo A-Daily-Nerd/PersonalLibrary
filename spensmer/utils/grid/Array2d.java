@@ -54,6 +54,21 @@ public class Array2d<arrayType> {
         }
     }
 
+    public String toString() {
+        StringBuilder sb = new StringBuilder(); // Create a new StringBuilder object
+
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                sb.append(getValue(new Point<Integer>(x, y))); // Append the value
+                sb.append(", "); // Append the separator
+            }
+             sb.append(System.lineSeparator()); // Use lineSeparator for a new line
+    }
+
+    return sb.toString(); // Return the final string
+    }
+
+
     /**
      * @param action the BiConsumer action that you want to perform on the values of the Array
      */
