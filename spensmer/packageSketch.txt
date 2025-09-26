@@ -1,4 +1,4 @@
-com.spencer.utils/
+spensmer.utils/
  ├── geometry/
  │    ├── Point.java           // already exists
  │    ├── Line.java            // optional: represents a line segment between points
