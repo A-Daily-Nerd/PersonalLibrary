@@ -26,14 +26,18 @@ public class MathUtils
         return finalValue;
     }
 
-    public static <T extends Number> Array2d<Double> matrixAddition(Array2d<T> a, Array2d<T> b) {
+    public static <T extends Number, J extends Number> Array2d<Double> matrixAddition(Array2d<T> a, Array2d<J> b) {
         if ((a.width != b.width) || (a.height != b.height)) {
             throw new ArithmeticException("Matricies have to be the same size");
         }
+
+        Array2d<Double> finalArray2d = new Array2d<>(Double.class, a.width, a.height, 0.0);
+
         a.forEach((point, value) -> {
             // add value from b at the same point
             Double sum = value.doubleValue() + b.getValue(point).doubleValue();
-            a.setValue(point, sum); // store the new value back into a
+            finalArray2d.setValue(point, sum); // store the new value back into a
         });
+        return finalArray2d;
     }
 }

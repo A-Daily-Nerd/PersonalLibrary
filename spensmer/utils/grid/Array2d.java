@@ -60,8 +60,18 @@ public class Array2d<arrayType> {
             Point<Integer> point = new Point<>(convertIntToT(x), convertIntToT(y));
             arrayType value = getValue(point);
             action.accept(point, value);
-            }
         }
+    }
+}
+
+    // Helper method to convert int to T
+    @SuppressWarnings("unchecked")
+    private <T extends Number> T convertIntToT(int value) {
+        if (data.length == 0) return null;
+        if (data[0] instanceof Integer) return (T) Integer.valueOf(value);
+        if (data[0] instanceof Double) return (T) Double.valueOf(value);
+        if (data[0] instanceof Float) return (T) Float.valueOf(value);
+        throw new IllegalArgumentException("Unsupported type for T");
     }
 
 }
