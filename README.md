@@ -16,9 +16,21 @@ It simplifies working with multidimensional data and includes abstractions for i
 
 ---
 
+## Usage
+All classes besides Array2d are generics limited to \<T extends Number\>
+
+### Array2d
+- Contructor takes (ComponentType, width, height, fillValue) usage looks like:
+Array2d<type> a = new Array2d<>(type.class,4,4, null);
+- getValue(Point<Integer> a) gets the value of point a in the array
+- setValue
+
+---
+
 ## 📦 Installation
 
 Clone the repository and include the `spensmer` package in your project:
 
 ```bash
 git clone https://github.com/A-Daily-Nerd/PersonalLibrary.git
+
