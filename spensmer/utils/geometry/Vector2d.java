@@ -37,4 +37,10 @@ public class Vector2d<type extends Number> {
         return new Vector2d<Double>(finalMagnitude, finalAngle);
 
     }
+
+    @Override
+    public String toString() {
+        return "<" + Magnitude " at " + angle + "rad>";
+    }
 }
+

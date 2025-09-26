@@ -54,6 +54,9 @@ public class Array2d<arrayType> {
         }
     }
 
+    /**
+     * @param action the BiConsumer action that you want to perform on the values of the Array
+     */
     public void forEach(BiConsumer<Point<Integer>, arrayType> action) {
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {

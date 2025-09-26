@@ -19,4 +19,9 @@ public class Line<type extends Number> {
         double finalValue = Math.sqrt(term1+term2);
         return finalValue;
     }
+
+    @Override
+    public String toString() {
+        return "Line with endpoints: " + String.toString(endPoint1) + " and " + String.toString(endPoint2);
+    }
 }
