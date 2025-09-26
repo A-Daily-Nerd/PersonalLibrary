@@ -40,7 +40,7 @@ public class Vector2d<type extends Number> {
 
     @Override
     public String toString() {
-        return "<" + Magnitude " at " + angle + "rad>";
+        return "<" + Magnitude + " at " + angle + "rad>";
     }
 }
 

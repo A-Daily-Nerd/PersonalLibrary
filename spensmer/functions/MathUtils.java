@@ -47,10 +47,11 @@ public class MathUtils
     }
 
 
-    public static Point<Integer>[] findNeighbors(Point<Integer> inital) {
-        if (((a.x == 0) || (a.y == 0)) || ((a.x == width) || (a.y == height))) { //Edge cases #IMPLIMENT LATER
+    public static <T> Point<Integer>[] findNeighbors(Array2d<T> a, Point<Integer> inital) {
+        if (((inital.x == 0) || (inital.x == 0)) || ((inital.x == a.width) || (inital.y == a.height))) { //Edge cases #IMPLIMENT LATER
         }
-        Point<Integer>[] returnValues = new Point<Integer>[8];
+        @SuppressWarnings("unchecked")
+        Point<Integer>[] returnValues = new Point[8];
         returnValues[0] = new Point<Integer>(inital.x-1,inital.y+1);
         returnValues[1] = new Point<Integer>(inital.x,inital.y+1);
         returnValues[2] = new Point<Integer>(inital.x+1,inital.y+1);

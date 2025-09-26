@@ -22,6 +22,6 @@ public class Line<type extends Number> {
 
     @Override
     public String toString() {
-        return "Line with endpoints: " + String.toString(endPoint1) + " and " + String.toString(endPoint2);
+        return "Line with endpoints: " + endPoint1.toString() + " and " + endPoint2.toString();
     }
 }
