@@ -24,7 +24,10 @@ public class Array2d<arrayType> {
         Arrays.fill(data, initialValue);
     }
 
-    //Gets index of point a
+    /**
+     * @param a Point a to get the index of the point a in array2d
+     * @return the index of point a in a flattened arrayType[] array
+     */
     private int indexOf(Point<Integer> a) {
         // Add a check to prevent ArrayIndexOutOfBoundsException.
         if (a.x < 0 || a.x >= width || a.y < 0 || a.y >= height) {
@@ -33,18 +36,26 @@ public class Array2d<arrayType> {
         return a.y * width + a.x;
     }
 
-    //Returns the data at index of point a
+    /**
+     * @param a Point to get value of in array2d
+     * @return arrayType value of point a
+     */
     public arrayType getValue(Point<Integer> a) {
         int indexValue = indexOf(a);
         return data[indexValue];
     }
 
-    //Sets the point a to newValue
+    /**
+     * @param a point to set
+     * @param newValue value to set a to in array2d
+     */
     public void setValue(Point<Integer> a, arrayType newValue) {
         data[indexOf(a)] = newValue;
     }
 
-    //Print the Array properly
+    /**
+     * Prints the array to stdout
+     */
     public void printArray() {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
@@ -54,6 +65,9 @@ public class Array2d<arrayType> {
         }
     }
 
+    /**
+     * @return String of the array that can be printed prettily to stdout
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder(); // Create a new StringBuilder object
 
@@ -82,7 +96,10 @@ public class Array2d<arrayType> {
     }
 }
 
-    // Helper method to convert int to T
+    /**
+     * @param value int value to conver to type T
+     * @return T type of Value (T) value
+     */
     @SuppressWarnings("unchecked")
     private <T extends Number> T convertIntToT(int value) {
         if (data.length == 0) return null;
