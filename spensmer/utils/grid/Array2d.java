@@ -7,8 +7,8 @@ import java.util.function.BiConsumer;
 import spensmer.utils.geometry.Point;
 
 public class Array2d<arrayType> {
-    public int width;
-    public int height;
+    public final int width;
+    public final int height;
     private arrayType[] data;
     /**
      * @param componentType Type to store in the array
@@ -110,3 +110,4 @@ public class Array2d<arrayType> {
     }
 
 }
+
