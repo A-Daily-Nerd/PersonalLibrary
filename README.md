@@ -28,7 +28,7 @@ Array2d<type> a = new Array2d<>(type.class,4,4, null);
 - printArray() prints the array out in 2d form with the values in the array
 
 ### Line
-- Constructor takes (Point\<T\> a, Point\<type\> b) where a and b are endpoints
+- Constructor takes (Point\<T\> a, Point\<Tpe\> b) where a and b are endpoints
 - length() returns double with the distance between its endpoints
 - String.toString(Line) returns "Line with endpoints: (Point1) (Point2)"
 
@@ -54,5 +54,11 @@ Clone the repository and include the `spensmer` package in your project:
 
 ```bash
 git clone https://github.com/A-Daily-Nerd/PersonalLibrary.git
+```
+or Clone this url in a different way
+```url
+https://github.com/A-Daily-Nerd/PersonalLibrary.git
+```
+
 
 
